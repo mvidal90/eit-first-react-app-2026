@@ -1,0 +1,42 @@
+
+.btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid;
+    border-radius: 0.25rem;
+}
+
+.btn-color-primary.btn-solid {
+    background-color: rgb(102, 29, 171);
+    color: white;
+    border-color: rgb(102, 29, 171)
+}
+
+.btn-color-primary.btn-outline {
+    background-color: transparent;
+    color: rgb(102, 29, 171);
+    border-color: rgb(102, 29, 171)
+}
+
+.btn-color-success.btn-solid {
+    background-color: rgb(24, 103, 11);
+    color: white;
+    border-color: rgb(24, 103, 11)
+}
+
+.btn-color-success.btn-outline {
+    background-color: transparent;
+    color: rgb(24, 103, 11);
+    border-color: rgb(24, 103, 11)
+}
+
+.btn-color-error.btn-solid {
+    background-color: rgb(165, 51, 31);
+    color: white;
+    border-color: rgb(165, 51, 31)
+}
+
+.btn-color-error.btn-outline {
+    background-color: transparent;
+    color: rgb(165, 51, 31);
+    border-color: rgb(165, 51, 31)
+}
