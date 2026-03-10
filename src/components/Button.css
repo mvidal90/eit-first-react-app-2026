@@ -5,14 +5,30 @@
     border-radius: 0.25rem;
 }
 
+.btn:active {
+    box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.5);
+}
+
 .btn-color-primary.btn-solid {
     background-color: rgb(102, 29, 171);
     color: white;
     border-color: rgb(102, 29, 171)
 }
 
+.btn-color-primary.btn-solid:hover {
+    background-color: rgb(81, 22, 136);
+    border-color: rgb(81, 22, 136)
+}
+
+
 .btn-color-primary.btn-outline {
     background-color: transparent;
+    color: rgb(102, 29, 171);
+    border-color: rgb(102, 29, 171)
+}
+
+.btn-color-primary.btn-outline:hover {
+    background-color: rgb(102, 29, 171, 0.25);
     color: rgb(102, 29, 171);
     border-color: rgb(102, 29, 171)
 }
@@ -23,8 +39,20 @@
     border-color: rgb(24, 103, 11)
 }
 
+.btn-color-success.btn-solid:hover {
+    background-color: rgb(16, 70, 7);
+    color: white;
+    border-color: rgb(16, 70, 7)
+}
+
 .btn-color-success.btn-outline {
     background-color: transparent;
+    color: rgb(24, 103, 11);
+    border-color: rgb(24, 103, 11)
+}
+
+.btn-color-success.btn-outline:hover {
+    background-color: rgb(24, 103, 11, 0.25);
     color: rgb(24, 103, 11);
     border-color: rgb(24, 103, 11)
 }
@@ -35,8 +63,20 @@
     border-color: rgb(165, 51, 31)
 }
 
+.btn-color-error.btn-solid:hover {
+    background-color: rgb(116, 32, 18);
+    color: white;
+    border-color: rgb(116, 32, 18)
+}
+
 .btn-color-error.btn-outline {
     background-color: transparent;
+    color: rgb(165, 51, 31);
+    border-color: rgb(165, 51, 31)
+}
+
+.btn-color-error.btn-outline:hover {
+    background-color: rgb(165, 51, 31, 0.25);
     color: rgb(165, 51, 31);
     border-color: rgb(165, 51, 31)
 }

@@ -1,0 +1,13 @@
+
+.counter-title {
+    color: white;
+}
+
+.counter-container {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 16px;
+}

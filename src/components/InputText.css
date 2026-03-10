@@ -17,6 +17,7 @@
     color: white;
     background: transparent;
     border-radius: 0.25rem;
+    box-sizing: border-box;
     padding: 8px;
     width: 100%;
 }
