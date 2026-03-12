@@ -2,7 +2,7 @@
 import "./InputText.css"
 import Text from "./Text"
 
-function InputText({ handleChange, value, label, id, type }) {
+function InputText({ handleChange, value, label, id, type, error }) {
   return (
     <div className="input-wrapper">
         <Text 
@@ -19,8 +19,17 @@ function InputText({ handleChange, value, label, id, type }) {
           onChange={handleChange}
           value={value}
           type={type}
-          className="input-field"
+          className={`input-field ${error ? "input-error" : ""}`}
         />
+        {
+          error ?
+            <Text 
+              as="span"
+              className="input-error-text"
+              text={error}
+            />
+          : null
+        }
     </div>
   )
 }

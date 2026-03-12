@@ -1,6 +1,9 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Button from './Button'
 import InputText from './Inputtext'
+
+import { validateLogin } from '../utils/validations/validateLogin.js';
+
 import './LoginForm.css'
 
 function LoginForm() {
@@ -9,6 +12,21 @@ function LoginForm() {
         user: "",
         password: "",
     })
+
+    const [errors, setErrors] = useState({
+        user: "",
+        password: "",
+    })
+
+    useEffect(() => {
+        if (values.user || values.password) {
+            const errorsValidated = validateLogin(values)
+            setErrors(errorsValidated)
+        }
+        return () => {
+            // clean up -> al desmontarse el componente
+        }
+    }, [values])
 
     const handleInputChange = (e) => {
         setValues({
@@ -29,13 +47,15 @@ function LoginForm() {
                 id="user"
                 type="text"
                 value={values.user}
-                handleChange={handleInputChange} />
+                handleChange={handleInputChange}
+                error={errors["user"]} />
             <InputText
                 label="Contraseña" 
                 id="password" 
                 type="password"
                 value={values.password}
-                handleChange={handleInputChange} />
+                handleChange={handleInputChange}
+                error={errors["password"]}  />
             <Button
                 label="Iniciar Sesión"
                 type="submit" />
