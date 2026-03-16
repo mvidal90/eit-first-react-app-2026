@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router';
+
 import Button from './Button'
 import InputText from './Inputtext'
 
@@ -8,6 +10,7 @@ import './LoginForm.css'
 
 function LoginForm() {
 
+    const navigate = useNavigate()
     const [values, setValues] = useState({
         user: "",
         password: "",
@@ -37,7 +40,10 @@ function LoginForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log(values)
+        if (!errors.user && !errors.password) {
+            console.log(values)
+            navigate("/home")
+        }
     }
 
     return (
