@@ -20,11 +20,11 @@
     box-sizing: border-box;
     padding: 8px;
     width: 100%;
+    &.input-error {
+        border-color: rgb(164, 19, 19)
+    }
 }
 
-.input-field.input-error {
-    border-color: rgb(164, 19, 19)
-}
 
 .input-error-text {
     color: rgb(164, 19, 19);

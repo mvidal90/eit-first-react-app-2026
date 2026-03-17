@@ -6,8 +6,6 @@ import InputText from './Inputtext'
 
 import { validateLogin } from '../utils/validations/validateLogin.js';
 
-import './LoginForm.css'
-
 function LoginForm() {
 
     const navigate = useNavigate()

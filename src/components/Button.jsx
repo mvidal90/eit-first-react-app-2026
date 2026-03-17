@@ -1,6 +1,4 @@
 
-import "./Button.css"
-
 function Button({ label, handleClick, type = "button", color = "primary", variant = "solid" }) {
     return (
         <button

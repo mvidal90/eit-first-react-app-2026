@@ -1,5 +1,4 @@
 
-import "./InputText.css"
 import Text from "./Text"
 
 function InputText({ handleChange, value, label, id, type, error }) {
