@@ -7,7 +7,7 @@ function Home() {
 
     return (
         <>
-            <Text as="h2" text={nowHours > 19 ? "Hola, muy buenas noches!" : "Hola muy buenos días!!"} props={{ style: {color: "white"} }} />
+            <Text as="h2" text={nowHours > 19 ? "Hola, muy buenas noches!" : "Hola muy buenos días!!"} />
             <Counter />
             <div>
                 <Button
