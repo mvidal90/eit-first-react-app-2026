@@ -4,9 +4,12 @@ import { createRoot } from 'react-dom/client'
 import AppRoutes from './routes/AppRoutes.jsx'
 
 import './styles/main.scss'
+import FavoriteProvider from './context/FavoriteProvider.jsx'
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
-        <AppRoutes />
+        <FavoriteProvider>
+            <AppRoutes />
+        </FavoriteProvider>
     </StrictMode>,
 )

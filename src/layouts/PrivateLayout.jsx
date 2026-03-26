@@ -1,7 +1,14 @@
+import { useContext } from 'react'
 import { Outlet } from 'react-router'
+
 import Header from './Header'
 
+import FavoriteContext from '../context/FavoriteContext'
+
 function PrivateLayout() {
+
+    const {favoriteList} = useContext(FavoriteContext)
+
     return (
         <div>
             <Header 
@@ -14,7 +21,7 @@ function PrivateLayout() {
                         label: "Mis compras"
                     }, {
                         to: "/favorites",
-                        label: "Mis favoritos"
+                        label: `Mis favoritos (${favoriteList.length})`
                     }
                 ]}
             />

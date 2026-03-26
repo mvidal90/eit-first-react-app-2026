@@ -1,0 +1,38 @@
+
+.favorites__page {
+    width: 100vw;
+    h2 {
+        text-align: center;
+    }
+}
+
+.favorites__layout {
+    display: flex;
+    justify-content: space-around;
+}
+
+.favorite__list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.product__card-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(102, 29, 171);
+    box-shadow: 0px 0px 4px 4px rgb(102, 29, 171, 0.5);
+    padding: 12px;
+    h4, p {
+        margin: 0;
+    }
+}
+
+.product__card-price {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
