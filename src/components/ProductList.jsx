@@ -22,7 +22,6 @@ function ProductList() {
                 )
             }
         </div>
-   
     )
 }
 
