@@ -1,4 +1,4 @@
-import { Suspense, useState } from "react"
+import { Suspense, useMemo, useState } from "react"
 
 import Text from "../components/Text"
 import TodoList from "../components/TodoList"
@@ -8,8 +8,7 @@ function TodosWithUse() {
 
     const [search, setSearch] = useState("")
 
-    // TODO agregar useMemo
-    const todoPromise = getTodos(search)
+    const todoPromise = useMemo(() => getTodos(search), [search])
 
     return (
         <>

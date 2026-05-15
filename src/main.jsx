@@ -3,13 +3,12 @@ import { createRoot } from 'react-dom/client'
 //import App from './App.jsx'
 import AppRoutes from './routes/AppRoutes.jsx'
 
-import './styles/main.scss'
 import FavoriteProvider from './context/FavoriteProvider.jsx'
 
+import './styles/main.scss'
+
 createRoot(document.getElementById('root')).render(
-    <StrictMode>
-        <FavoriteProvider>
-            <AppRoutes />
-        </FavoriteProvider>
-    </StrictMode>,
+    <FavoriteProvider>
+        <AppRoutes />
+    </FavoriteProvider>,
 )

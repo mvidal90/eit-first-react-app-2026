@@ -6,21 +6,23 @@ import InputText from './Inputtext'
 
 import { validateLogin } from '../utils/validations/validateLogin.js';
 
+import { postLogin } from '../api/auth.js'
+
 function LoginForm() {
 
     const navigate = useNavigate()
     const [values, setValues] = useState({
-        user: "",
+        email: "",
         password: "",
     })
 
     const [errors, setErrors] = useState({
-        user: "",
+        email: "",
         password: "",
     })
 
     useEffect(() => {
-        if (values.user || values.password) {
+        if (values.email || values.password) {
             const errorsValidated = validateLogin(values)
             setErrors(errorsValidated)
         }
@@ -38,9 +40,16 @@ function LoginForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        if (!errors.user && !errors.password) {
-            console.log(values)
-            navigate("/home")
+        if (!errors.email && !errors.password) {
+            postLogin(values)
+                .then((response) => {
+                    console.log(response)
+                    navigate("/home")
+                })
+                .catch((error) => {
+                    const errorsField = error.response.data.errors
+                    setErrors(errorsField)
+                })
         }
     }
 
@@ -48,11 +57,11 @@ function LoginForm() {
         <form className='form-container' onSubmit={handleSubmit}>
             <InputText 
                 label="Usuario"
-                id="user"
+                id="email"
                 type="text"
-                value={values.user}
+                value={values.email}
                 handleChange={handleInputChange}
-                error={errors["user"]} />
+                error={errors["email"]} />
             <InputText
                 label="Contraseña" 
                 id="password" 
