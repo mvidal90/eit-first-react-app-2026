@@ -6,7 +6,7 @@ import { Outlet } from 'react-router'
 
 import Header from './Header'
 
-import FavoriteContext from '../context/FavoriteContext'
+import FavoriteContext from '../context/favorite/FavoriteContext'
 
 function PrivateLayout() {
 

@@ -1,15 +1,15 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import { useNavigate } from 'react-router';
+
+import AuthContext from '../context/auth/AuthContext.jsx';
 
 import Button from './Button'
 import InputText from './Inputtext'
 
 import { validateLogin } from '../utils/validations/validateLogin.js';
 
-import { postLogin } from '../api/auth.js'
-
 function LoginForm() {
-
+    const {handleLogin} = useContext(AuthContext)
     const navigate = useNavigate()
     const [values, setValues] = useState({
         email: "",
@@ -41,9 +41,8 @@ function LoginForm() {
     const handleSubmit = (e) => {
         e.preventDefault()
         if (!errors.email && !errors.password) {
-            postLogin(values)
-                .then((response) => {
-                    console.log(response)
+            handleLogin(values)
+                .then(() => {
                     navigate("/home")
                 })
                 .catch((error) => {

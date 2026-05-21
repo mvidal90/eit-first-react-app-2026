@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import Text from './Text'
 import ProductCard from './ProductCard'
-import FavoriteContext from '../context/FavoriteContext'
+import FavoriteContext from '../context/favorite/FavoriteContext'
 
 import productList from '../data/products.json'
 

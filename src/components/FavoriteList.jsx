@@ -1,7 +1,7 @@
 import Text from './Text'
 import ProductCard from './ProductCard'
 import { useContext } from 'react'
-import FavoriteContext from '../context/FavoriteContext'
+import FavoriteContext from '../context/favorite/FavoriteContext'
 
 function FavoriteList() {
 

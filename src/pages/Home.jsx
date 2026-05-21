@@ -1,13 +1,18 @@
+import { useContext } from "react"
+
+import AuthContext from "../context/auth/AuthContext.jsx"
+
 import Button from "../components/Button"
 import Counter from "../components/Counter"
 import Text from "../components/Text"
 
 function Home() {
     const nowHours = new Date().getHours()
+    const { user } = useContext(AuthContext)
 
     return (
         <>
-            <Text as="h2" text={nowHours > 19 ? "Hola, muy buenas noches!" : "Hola muy buenos días!!"} />
+            <Text as="h2" text={nowHours > 19 ? `Hola ${user.name} ${user.lastName}, muy buenas noches!` : `Hola ${user.name} ${user.lastName}, muy buenos días!!`} />
             <Counter />
             <div>
                 <Button
